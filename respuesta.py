@@ -9,9 +9,11 @@ class Respuesta():
     @property
     def id(self):
         return self.__id
+   
     @property
     def cuerpo(self):
         return self.__cuerpo
+        
     @property
     def correcta(self):
         return self.__correcta
