@@ -179,6 +179,28 @@ class Sqlite():
 
     # -------------------------------------------------------------
 
+    def actualizar_registro_solo_pregunta_id(self, tabla, cadena_campos, cadena_valores, campo_id, valor_id):
+        """
+            Modifica un registro (dado) en la tabla pasada como parámetro.
+            La listas de campos y de valores solo tienen un elemento.
+            Devuelve la cuenta de registros actualizados/modificados. Normalmente será 1 y cierra la conexión.
+        """
+        
+        try:
+            cnx = self.conectar
+            cursor = cnx.cursor()
+            consulta = self.__preparar_consulta_act_2('juego_respuesta', 'pregunta_id', cadena_valores, campo_id, valor_id)
+            cursor.execute(consulta)
+            cnx.commit()
+            salida = cursor.rowcount        # número de registros modificados. Normalmente 1
+            cnx.close()
+            return salida
+        except sqlite3.OperationalError as error:
+            print("Ocurrió un error: ", error)
+        
+
+    # -------------------------------------------------------------
+
 
     def __validar_entrada(self, in1, in2):
         return len(self.__cadena_a_lista(in1)) == len(self.__cadena_a_lista(in2))
@@ -186,6 +208,12 @@ class Sqlite():
     # -------------------------------------------------------------
 
     def __preparar_consulta_act(self, tabla, cadena_campos, cadena_valores, campo_id, valor_id):
+        cadena_campo_valor = f"update {tabla} set {cadena_campos} = {cadena_valores} where {campo_id}={valor_id}"
+        return cadena_campo_valor
+
+    # -------------------------------------------------------------   
+
+    def __preparar_consulta_act_2(self, tabla, cadena_campos, cadena_valores, campo_id, valor_id):
         cadena_campo_valor = f"update {tabla} set {cadena_campos} = {cadena_valores} where {campo_id}={valor_id}"
         return cadena_campo_valor
 

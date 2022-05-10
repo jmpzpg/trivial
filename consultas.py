@@ -93,6 +93,44 @@ bd.insertar_registro('Pregunta', 'cuerpo,tematica_id,dificultad_id',
 bd.insertar_registro('Pregunta', 'cuerpo,tematica_id,dificultad_id',
                                 'En el famoso motín de la Bounty qué valiosa carga se tiró por la borda?,3,5')
 
+#  ---------  para la de Trivial 20 ---------
+
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '3,España se unió a la Comunidad Europea en el año?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '4,España ganó su primer mundial de fútbol en el año?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '3,Los árabes invadieron la península ibérica en el año?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '3,El hombre pisó la Luna por primera vez en el año?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '2,Río navegable de la península ibérica?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '4,En la marathón se corre una distancia de?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '2,La capital de Ucrania es?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '2,La capital de Alemania es?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '2,La capital de Paises Bajos es?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '4,Equipo que ganó la copa del Rey en la temporada 2021-2022?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '2,La altura de Sevilla sobre el nivel del mar es de?')
+
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '2,La referencia del nivel del mar en España se toma en?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '4,Nuestra campeona Carolina Marín nació en?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '3,La gripe española de 1918 disminuyó la población mundial en?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '1,Cuántos años tardó el juego del Trivial en popularizarse?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '1,Qué probabilidad habrá de contagarse de COVID en la feria de Sevilla?')
+bd.insertar_registro('juego_pregunta', 'tematica_id,texto',
+                                '3,En el famoso motín de la Bounty qué valiosa carga se tiró por la borda?')
+
 
 
 # Llenar la tabla Respuesta
